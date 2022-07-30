@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'rating',
+    loadChildren: () => import('./rating/rating.module').then( m => m.RatingPageModule)
+  },
+  {
+    path: 'rating2',
+    loadChildren: () => import('./rating2/rating2.module').then( m => m.Rating2PageModule)
+  },
+  {
+    path: 'rating3',
+    loadChildren: () => import('./rating3/rating3.module').then( m => m.Rating3PageModule)
+  },
+  {
+    path: 'tollfare',
+    loadChildren: () => import('./tollfare/tollfare.module').then( m => m.TollfarePageModule)
+  },
 ];
 
 @NgModule({
