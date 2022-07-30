@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      HighwayRating
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item routerLink="/rating2" *ngFor="let dataItem of DepartmentList">
+      <!-- <ion-thumbnail slot="start">
+        <img src="../assets/icon/e32-gray.png">
+      </ion-thumbnail> -->
+      <ion-thumbnail><img ng-src="{{dataItem.highwayPhoto}}" ng-click="showImages($index)" class="image-list-thumb"/></ion-thumbnail>
+      <ion-label>{{dataItem.highwayid}}</ion-label>
+        <ion-label>{{dataItem.highwayName}}</ion-label>
+      
+        <!-- <img class="imges" src="../assets/image/download.png"> -->
+       
+    </ion-item>
+  </ion-list>
+</ion-content>

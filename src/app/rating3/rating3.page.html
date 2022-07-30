@@ -1,0 +1,50 @@
+
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      WriteReview
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form >
+<ion-label>Name</ion-label>
+<br>
+<input type="text" name="name" style="border-color: white; background:#f2f2f2ee; border-radius: 4px;">
+<br>
+<ion-label style="font-size:small; color:red">require to feild</ion-label>
+<br>
+<br>
+
+
+<ion-label>Rating</ion-label>
+
+<!-- <div class="star">
+  <input type="radio" name="rate" id ="rate-5">
+  <label for="rate-5" class="fas fa-star"></label>
+  <input type="radio" name="rate" id ="rate-4">
+  <label for="rate-4" class="fas fa-star"></label>
+  <input type="radio" name="rate" id ="rate-3">
+  <label for="rate-3" class="fas fa-star"></label>
+  <input type="radio" name="rate" id ="rate-2">
+  <label for="rate-2" class="fas fa-star"></label>
+  <input type="radio" name="rate" id ="rate-1">
+  <label for="rate-1" class="fas fa-star"></label>
+</div>  -->
+<br>
+<ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false" style="color:yellow"></ngb-rating>
+<br>
+<br>
+
+<ion-label>Comment</ion-label>
+<br>
+<textarea  placeholder="write your comment here" style="background:#f2f2f2ee; width: 100%; height: 150px; padding: 12px 20px; border-radius: 4px; border-color: white; border;" ></textarea>
+<br>
+<ion-button style="float:right ">Submit </ion-button>
+</form>
+</ion-content>
+
